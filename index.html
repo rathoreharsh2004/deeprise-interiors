@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Deeprise Interiors — refined interior design for residential and commercial spaces.">
+<title>Deeprise Interiors | Luxury Interior Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--ivory:#f8f5ef;--white:#fff;--dark:#211d19;--text:#2b2722;--muted:#756d63;--sand:#e9dfcf;--gold:#ad8d5e;--line:#211d1918;--max:1200px;--shadow:0 24px 65px #211d1918}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--ivory);color:var(--text);overflow-x:hidden}a{text-decoration:none;color:inherit}img{width:100%;display:block}button,input,textarea,select{font:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}section{padding:105px 0}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:17px}.eyebrow:before{content:"";width:34px;height:1px;background:currentColor}.title{font:500 clamp(42px,5.5vw,75px)/1.02 "Playfair Display",serif;letter-spacing:-2px}.title em{font-style:italic;color:#78664e}.copy{color:var(--muted);line-height:1.9;font-size:14px;max-width:650px;margin-top:20px}.center{text-align:center}.center .eyebrow{justify-content:center}.center .copy{margin-left:auto;margin-right:auto}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border:0;border-radius:2px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.25s}.dark{background:var(--dark);color:#fff}.light{background:#fff;color:var(--dark)}.outline{background:#ffffff12;color:#fff;border:1px solid #fff8;backdrop-filter:blur(8px)}.reveal{opacity:0;transform:translateY(42px);transition:.9s cubic-bezier(.22,1,.36,1)}.reveal.left{transform:translateX(-55px)}.reveal.right{transform:translateX(55px)}.reveal.visible{opacity:1;transform:none}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* loader */
+.loader{position:fixed;inset:0;background:var(--dark);z-index:9999;display:grid;place-items:center;color:#fff;transition:.7s}.loader.hide{opacity:0;visibility:hidden}.loader-name{font:500 30px "Playfair Display",serif;letter-spacing:2px;text-align:center}.loader-line{height:1px;width:85px;background:var(--gold);margin:15px auto}.loader-sub{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#fff8}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;color:#fff;transition:.35s}.nav.scrolled{background:#f8f5eff2;color:var(--dark);backdrop-filter:blur(15px);box-shadow:0 8px 28px #0000000d}.navin{height:86px;display:flex;align-items:center;justify-content:space-between}.brand{font:600 19px "Playfair Display",serif;letter-spacing:1px}.brand small{display:block;font:8px "DM Sans",sans-serif;letter-spacing:2.5px;text-transform:uppercase;opacity:.7;margin-top:2px}.links{display:flex;gap:25px;align-items:center;list-style:none}.links a{font-size:10px;letter-spacing:1px;text-transform:uppercase;position:relative}.links a:not(.cta):after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:currentColor;transition:.3s}.links a:hover:after{width:100%}.cta{background:var(--gold);color:#fff!important;padding:12px 17px}.menu{display:none;background:none;border:0;color:currentColor;font-size:20px}
+
+/* hero horizontal slider */
+.hero{height:100vh;min-height:650px;position:relative;overflow:hidden;color:#fff;display:flex;align-items:center}.slides,.slide{position:absolute;inset:0}.slide{background:center/cover no-repeat;opacity:0;transform:translateX(100%) scale(1.035);transition:transform 1s cubic-bezier(.77,0,.18,1),opacity 1s}.slide.active{opacity:1;transform:translateX(0) scale(1)}.slide.exit{opacity:1;transform:translateX(-100%) scale(1.02)}.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#17130fba,#17130f55 58%,#17130f20)}.hero-content{position:relative;z-index:3;max-width:820px;padding-top:55px}.hero .eyebrow{color:#dbc29a}.hero h1{font:500 clamp(55px,7.5vw,104px)/.92 "Playfair Display",serif;letter-spacing:-3px}.hero h1 span{color:#dfc392;font-style:italic}.hero p{font-size:15px;line-height:1.85;color:#fffc;max-width:670px;margin:26px 0 32px}.actions{display:flex;gap:11px;flex-wrap:wrap}.hero-meta{position:absolute;z-index:4;bottom:28px;left:50%;transform:translateX(-50%);width:min(var(--max),calc(100% - 40px));display:flex;justify-content:space-between;align-items:center}.count{font-size:9px;letter-spacing:3px}.count strong{font:500 18px "Playfair Display",serif}.dots{display:flex;gap:5px}.dot{width:27px;height:2px;border:0;background:#fff5;cursor:pointer}.dot.active{background:#fff}.scroll{font-size:8px;letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:10px}.scroll:after{content:"";width:45px;height:1px;background:#fff7}
+
+/* general */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}.about-visual{position:relative;padding-right:55px}.about-main{height:630px;object-fit:cover}.about-small{position:absolute;width:220px;height:270px;right:0;bottom:-30px;object-fit:cover;border:9px solid var(--ivory)}.signature{margin-top:28px;border-top:1px solid var(--line);padding-top:18px;font:italic 21px "Playfair Display",serif;color:#77664f}
+.services{background:#eee6da}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:55px}.service{height:400px;position:relative;overflow:hidden;color:#fff}.service img{height:100%;object-fit:cover;transition:.8s}.service:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fdd,transparent 65%)}.service:hover img{transform:scale(1.07)}.service-info{position:absolute;z-index:2;left:24px;right:24px;bottom:23px}.service-info small{font-size:9px;letter-spacing:2px;color:#e0c79a}.service-info h3{font:500 25px "Playfair Display",serif;margin:6px 0}.service-info p{font-size:11px;line-height:1.7;color:#fff9}.arrow{display:grid;place-items:center;width:33px;height:33px;border:1px solid #fff7;margin-top:13px;transition:.3s}.service:hover .arrow{transform:translateX(7px)}
+.dark-section{background:#28231e;color:#fff}.style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:55px}.style{height:470px;position:relative;overflow:hidden}.style img{height:100%;object-fit:cover;transition:.8s}.style:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fe6,transparent 67%)}.style:hover img{transform:scale(1.06)}.style-info{position:absolute;z-index:2;left:25px;right:25px;bottom:25px}.style-info small{font-size:9px;letter-spacing:2px;color:#dfc395}.style-info h3{font:500 29px "Playfair Display",serif;margin:7px 0}.style-info p{font-size:11px;line-height:1.7;color:#fffb}
+.projects{background:#fff}.project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px;margin-top:55px}.project{grid-column:span 4;height:390px;position:relative;overflow:hidden}.project.wide{grid-column:span 8;height:520px}.project.tall{height:520px}.project img{height:100%;object-fit:cover;transition:.8s}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fcc,transparent 65%)}.project:hover img{transform:scale(1.06)}.project-info{position:absolute;z-index:2;left:23px;bottom:22px;color:#fff}.project-info small{font-size:9px;letter-spacing:2px;color:#dfc395}.project-info h3{font:500 27px "Playfair Display",serif;margin-top:5px}
+.cinema{height:640px;position:relative;overflow:hidden;color:#fff;display:flex;align-items:center}.cinema-bg{position:absolute;inset:-5%;background:url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90") center/cover;transform:scale(1.05)}.cinema:after{content:"";position:absolute;inset:0;background:#17120f70}.cinema-content{position:relative;z-index:2}
+.details{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:50px}.detail-main{height:600px;overflow:hidden}.detail-main img,.detail-img img{height:100%;object-fit:cover;transition:.8s}.detail-main:hover img,.detail-img:hover img{transform:scale(1.05)}.detail-side{display:grid;grid-template-columns:1fr 1fr;gap:16px}.detail-img{height:292px;overflow:hidden}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:55px}.app{height:300px;position:relative;overflow:hidden}.app img{height:100%;object-fit:cover;transition:.7s}.app:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fd5,transparent 70%)}.app:hover img{transform:scale(1.06)}.app span{position:absolute;z-index:2;left:20px;bottom:19px;color:#fff;font:500 21px "Playfair Display",serif}
+.process{background:var(--sand)}.process-grid{display:grid;grid-template-columns:repeat(5,1fr);margin-top:55px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:33px 20px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step b{font:38px "Playfair Display",serif;color:var(--gold)}.step h3{font:500 21px "Playfair Display",serif;margin:13px 0 7px}.step p{font-size:11px;line-height:1.7;color:var(--muted)}
+.principles{display:grid;grid-template-columns:1fr 1fr;gap:80px}.principle-list{border-top:1px solid var(--line);margin-top:25px}.principle{display:grid;grid-template-columns:45px 1fr;gap:15px;padding:21px 0;border-bottom:1px solid var(--line)}.principle>span{font:24px "Playfair Display",serif;color:var(--gold)}.principle h3{font:500 20px "Playfair Display",serif}.principle p{font-size:11px;line-height:1.7;color:var(--muted);margin-top:5px}
+.faq{max-width:880px;margin:55px auto 0}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;padding:23px 0;background:none;border:0;display:flex;justify-content:space-between;text-align:left;cursor:pointer;font:500 20px "Playfair Display",serif;color:var(--text)}.faq-q i{transition:.3s}.faq-item.open .faq-q i{transform:rotate(45deg)}.faq-a{max-height:0;overflow:hidden;transition:max-height .4s}.faq-a p{padding:0 30px 23px 0;font-size:12px;line-height:1.8;color:var(--muted)}
+.contact{background:#e7ddce}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px}.contact-row{display:flex;gap:13px;margin:24px 0}.contact-icon{width:43px;height:43px;background:#fff;display:grid;place-items:center;color:var(--gold)}.contact-row span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:4px}.contact-row strong{font-size:14px;font-weight:500}.form{background:#fff;padding:38px;box-shadow:var(--shadow)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:15px}.field label{display:block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--ivory);padding:14px;outline:none}.field textarea{min-height:130px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:#fff}
+footer{background:#211d19;color:#fff;padding:70px 0 23px}.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .8fr;gap:60px;padding-bottom:48px}.footer-brand{font:500 27px "Playfair Display",serif;letter-spacing:1px}.footer-sub{font:8px "DM Sans",sans-serif;letter-spacing:3px;text-transform:uppercase;color:#fff8;margin-top:5px}.footer-copy{max-width:430px;font-size:12px;line-height:1.8;color:#fff8;margin-top:20px}.footer h4{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#dbc091;margin-bottom:18px}.footer-links{list-style:none}.footer-links li{font-size:11px;color:#fff9;margin:11px 0}.socials{display:flex;gap:9px;margin-top:22px}.socials a{width:40px;height:40px;border:1px solid #fff3;display:grid;place-items:center;transition:.3s}.socials a:hover{background:var(--gold);transform:translateY(-3px)}.bottom{border-top:1px solid #fff2;padding-top:20px;display:flex;justify-content:space-between;font-size:9px;color:#fff7}.bottom strong{color:#dbc091}
+
+/* floating left buttons */
+.floaters{position:fixed;left:18px;bottom:22px;z-index:4000;display:flex;flex-direction:column;gap:9px}.float{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 14px 35px #0003;transition:.25s}.float:hover{transform:scale(1.08)}.call{background:var(--dark)}.wa{background:#4f7f59}
+
+@media(max-width:1050px){.links{gap:14px}.about,.principles,.contact-grid{grid-template-columns:1fr;gap:50px}.service-grid{grid-template-columns:1fr 1fr}.app-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2n){border-right:0}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand-col{grid-column:span 2}}
+@media(max-width:800px){.menu{display:block}.links{position:fixed;top:78px;left:14px;right:14px;padding:25px;background:#fffefa;color:var(--dark);display:flex;flex-direction:column;align-items:flex-start;gap:20px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(-10px);transition:.3s}.links.open{opacity:1;pointer-events:auto;transform:none}.hero h1{font-size:57px}.style-grid{grid-template-columns:1fr}.project-grid{display:block}.project,.project.wide,.project.tall{height:400px;margin-bottom:15px}}
+@media(max-width:600px){.container{width:calc(100% - 28px)}section{padding:80px 0}.hero h1{font-size:48px}.hero-actions .btn{width:100%}.hero-meta .scroll{display:none}.about-main{height:430px}.about-small{width:150px;height:190px;border-width:7px;right:-2px;bottom:-18px}.service-grid,.app-grid{grid-template-columns:1fr}.service{height:370px}.details{grid-template-columns:1fr}.detail-main{height:430px}.detail-img{height:205px}.process-grid{grid-template-columns:1fr}.step,.step:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}.form-row{grid-template-columns:1fr}.form{padding:24px}.footer-grid{grid-template-columns:1fr}.footer-brand-col{grid-column:auto}.bottom{flex-direction:column;gap:8px}.floaters{left:11px;bottom:13px}.float{width:46px;height:46px}}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader"><div><div class="loader-name">DEEPRISE INTERIORS</div><div class="loader-line"></div><div class="loader-sub">Interior Design Studio</div></div></div>
+
+<header class="nav" id="nav">
+<div class="container navin">
+<a class="brand" href="#home">DEEPRISE INTERIORS<small>Interior Design Studio</small></a>
+<nav><ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#collections">Collections</a></li><li><a href="#projects">Projects</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li><li><a class="cta" href="#contact">Start a Project</a></li>
+</ul></nav>
+<button class="menu" id="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="slides">
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2200&q=90')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=90')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=90')"></div>
+</div>
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow reveal">DEEPRISE INTERIORS</div>
+<h1 class="reveal d1">Spaces that speak<br><span>without saying a word.</span></h1>
+<p class="reveal d2">Thoughtfully designed interiors where architecture, materials and everyday living come together.</p>
+<div class="actions reveal d3"><a class="btn light magnetic" href="#projects">Explore Our Work <i class="fa-solid fa-arrow-right"></i></a><a class="btn outline magnetic" href="#contact">Start Your Project</a></div>
+</div>
+</div>
+<div class="hero-meta">
+<div class="count"><strong id="current">01</strong> / 05</div>
+<div class="dots"><button class="dot active" data-i="0"></button><button class="dot" data-i="1"></button><button class="dot" data-i="2"></button><button class="dot" data-i="3"></button><button class="dot" data-i="4"></button></div>
+<div class="scroll">Scroll to explore</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div class="about-visual reveal left"><img class="about-main" src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1500&q=90" alt="Luxury contemporary living room"><img class="about-small" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=90" alt="Modern interior detail"></div>
+<div class="reveal right"><div class="eyebrow">The Deeprise Approach</div><h2 class="title">Designing spaces<br><em>with depth and detail.</em></h2><p class="copy">DEEPRISE INTERIORS focuses on thoughtfully designed, refined and functional environments where architecture, materials, furniture and everyday living work together.</p><p class="copy">The aim is simple: create interiors that feel considered, comfortable and visually cohesive without unnecessary decoration.</p><div class="signature">Every space deserves its own atmosphere.</div><a class="btn dark magnetic" href="#services" style="margin-top:28px">Discover Our Approach <i class="fa-solid fa-arrow-right"></i></a></div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="center reveal"><div class="eyebrow">What We Design</div><h2 class="title">Interior Design,<br><em>considered from every angle.</em></h2><p class="copy">Image-led interior solutions for residential and commercial environments, designed around how spaces are experienced every day.</p></div>
+<div class="service-grid">
+<div class="service reveal"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90" alt="Residential luxury interior"><div class="service-info"><small>01 / 08</small><h3>Residential Interiors</h3><p>Refined interiors designed around comfort, function and personal character.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal d1"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90" alt="Luxury living room"><div class="service-info"><small>02 / 08</small><h3>Living Room Design</h3><p>Layered furniture, lighting and materials for welcoming living spaces.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal d2"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90" alt="Luxury bedroom interior"><div class="service-info"><small>03 / 08</small><h3>Bedroom Interiors</h3><p>Calm, comfortable bedroom environments with carefully considered details.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal d3"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=90" alt="Modern kitchen"><div class="service-info"><small>04 / 08</small><h3>Modular Kitchens</h3><p>Functional kitchen environments balancing storage, workflow and visual harmony.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90" alt="Luxury bathroom"><div class="service-info"><small>05 / 08</small><h3>Bathroom Interiors</h3><p>Modern bathroom compositions using refined surfaces, fixtures and lighting.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal d1"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90" alt="Modern office"><div class="service-info"><small>06 / 08</small><h3>Office & Commercial</h3><p>Professional environments designed for clarity, comfort and contemporary work.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal d2"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=90" alt="Custom furniture"><div class="service-info"><small>07 / 08</small><h3>Custom Furniture</h3><p>Built-in and freestanding furniture concepts that connect the room together.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+<div class="service reveal d3"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=90" alt="Complete interior"><div class="service-info"><small>08 / 08</small><h3>Complete Interiors</h3><p>A cohesive approach bringing architecture, furniture, lighting and finishes together.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
+</div>
+</div>
+</section>
+
+<section class="dark-section" id="collections">
+<div class="container">
+<div class="reveal"><div class="eyebrow">Curated Interior Styles</div><h2 class="title">A visual language<br><em>for every mood.</em></h2><p class="copy" style="color:#fff9">Explore different directions in contemporary interior design through curated visual references.</p></div>
+<div class="style-grid">
+<div class="style reveal"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=90" alt="Modern minimal interior"><div class="style-info"><small>01 / Style</small><h3>Modern Minimal</h3><p>Clean lines, restrained materials and calm spaces.</p></div></div>
+<div class="style reveal d1"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90" alt="Warm contemporary interior"><div class="style-info"><small>02 / Style</small><h3>Warm Contemporary</h3><p>Warm woods, soft textures and sophisticated neutrals.</p></div></div>
+<div class="style reveal d2"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90" alt="Luxury modern interior"><div class="style-info"><small>03 / Style</small><h3>Luxury Modern</h3><p>Premium materials, architectural lighting and refined details.</p></div></div>
+<div class="style reveal"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90" alt="Organic interior"><div class="style-info"><small>04 / Style</small><h3>Earthen Living</h3><p>Natural materials, organic textures and warm tones.</p></div></div>
+<div class="style reveal d1"><img src="https://images.unsplash.com/photo-1600607688960-e095ff83135c?auto=format&fit=crop&w=1400&q=90" alt="Classic interior"><div class="style-info"><small>05 / Style</small><h3>Timeless Classic</h3><p>Elegant proportions and timeless interior details.</p></div></div>
+<div class="style reveal d2"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1400&q=90" alt="Urban interior"><div class="style-info"><small>06 / Style</small><h3>Urban Sophistication</h3><p>Contemporary spaces with a refined metropolitan character.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="projects" id="projects">
+<div class="container">
+<div class="center reveal"><div class="eyebrow">Interior Inspiration</div><h2 class="title">Spaces worth <em>experiencing.</em></h2><p class="copy">A curated visual collection of interior concepts and architectural inspiration. These images are references, not confirmed Deeprise Interiors projects.</p></div>
+<div class="project-grid">
+<div class="project wide reveal left"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90" alt="Luxury living room concept"><div class="project-info"><small>Living</small><h3>Contemporary Living</h3></div></div>
+<div class="project tall reveal right"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90" alt="Luxury bedroom concept"><div class="project-info"><small>Bedroom</small><h3>Quiet Retreat</h3></div></div>
+<div class="project reveal"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=90" alt="Modern kitchen concept"><div class="project-info"><small>Kitchen</small><h3>Modern Kitchen</h3></div></div>
+<div class="project reveal d1"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90" alt="Luxury bathroom concept"><div class="project-info"><small>Bathroom</small><h3>Refined Bath</h3></div></div>
+<div class="project wide reveal d2"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=90" alt="Modern office concept"><div class="project-info"><small>Office</small><h3>Contemporary Workspace</h3></div></div>
+</div>
+</div>
+</section>
+
+<section class="cinema">
+<div class="cinema-bg" id="parallax"></div>
+<div class="container"><div class="cinema-content reveal"><div class="eyebrow">The Atmosphere</div><h2 class="title">Good design changes<br><em>how a space feels.</em></h2><p class="copy" style="color:#fffb">From proportion and lighting to materials and furniture, every detail contributes to the atmosphere.</p></div></div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<div class="reveal"><div class="eyebrow">Details</div><h2 class="title">Details make<br><em>the difference.</em></h2><p class="copy">Close-up references of materials, lighting, furniture and architectural details that shape a finished interior.</p></div>
+<div class="details">
+<div class="detail-main reveal left"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=90" alt="Luxury interior detail"></div>
+<div class="detail-side">
+<div class="detail-img reveal d1"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=90" alt="Interior detail"></div>
+<div class="detail-img reveal d2"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=90" alt="Furniture detail"></div>
+<div class="detail-img reveal d3"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=90" alt="Warm interior detail"></div>
+<div class="detail-img reveal d4"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=90" alt="Natural interior texture"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#eee6da">
+<div class="container">
+<div class="center reveal"><div class="eyebrow">Applications</div><h2 class="title">Designed for <em>real life.</em></h2><p class="copy">Interior concepts across residential and commercial environments.</p></div>
+<div class="app-grid">
+<div class="app reveal"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=90" alt="Luxury home"><span>Luxury Homes</span></div>
+<div class="app reveal d1"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=90" alt="Modern apartment"><span>Apartments</span></div>
+<div class="app reveal d2"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=90" alt="Modern villa"><span>Modern Villas</span></div>
+<div class="app reveal d3"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=90" alt="Office interior"><span>Offices</span></div>
+</div>
+</div>
+</section>
+
+<section class="process" id="process">
+<div class="container">
+<div class="reveal"><div class="eyebrow">Our Process</div><h2 class="title">From first thought<br><em>to finished space.</em></h2><p class="copy">A considered process keeps the design direction, details and finished atmosphere aligned.</p></div>
+<div class="process-grid">
+<div class="step reveal"><b>01</b><h3>Discover</h3><p>Understand the space, requirements and lifestyle.</p></div>
+<div class="step reveal d1"><b>02</b><h3>Concept</h3><p>Develop the visual direction and design language.</p></div>
+<div class="step reveal d2"><b>03</b><h3>Design</h3><p>Refine layouts, materials, furniture and details.</p></div>
+<div class="step reveal d3"><b>04</b><h3>Execute</h3><p>Bring the approved design into the physical space.</p></div>
+<div class="step reveal d4"><b>05</b><h3>Reveal</h3><p>Complete the space as one cohesive environment.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container principles">
+<div class="reveal left"><div class="eyebrow">Design Principles</div><h2 class="title">Designed<br><em>with intention.</em></h2><p class="copy">A refined interior is about how materials, proportions, light and function work together.</p></div>
+<div class="principle-list">
+<div class="principle reveal"><span>01</span><div><h3>Function First</h3><p>Spaces should work naturally around everyday life.</p></div></div>
+<div class="principle reveal d1"><span>02</span><div><h3>Timeless Aesthetics</h3><p>Strong proportions and restrained choices create lasting visual appeal.</p></div></div>
+<div class="principle reveal d2"><span>03</span><div><h3>Material Harmony</h3><p>Textures, finishes and surfaces should feel connected.</p></div></div>
+<div class="principle reveal d3"><span>04</span><div><h3>Attention to Detail</h3><p>Small details are what make a finished room feel complete.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="faq" style="background:#fff">
+<div class="container">
+<div class="center reveal"><div class="eyebrow">FAQ</div><h2 class="title">Questions,<br><em>answered.</em></h2></div>
+<div class="faq">
+<div class="faq-item reveal"><button class="faq-q">What type of interiors does Deeprise Interiors design?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Deeprise Interiors is presented here as an interior design studio for residential and commercial interior environments.</p></div></div>
+<div class="faq-item reveal d1"><button class="faq-q">Do you work on residential interiors?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Yes. The website includes residential interior concepts such as living rooms, bedrooms, kitchens and bathrooms.</p></div></div>
+<div class="faq-item reveal d2"><button class="faq-q">Can you design kitchens and bedrooms?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Kitchen and bedroom interior design are included in the service presentation on this website.</p></div></div>
+<div class="faq-item reveal d3"><button class="faq-q">Do you handle complete interior projects?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Complete interior solutions are included as a service category. Contact Deeprise Interiors to discuss the exact scope of your project.</p></div></div>
+<div class="faq-item reveal"><button class="faq-q">Do you design office and commercial interiors?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Office and commercial interiors are included among the design applications presented on the website.</p></div></div>
+<div class="faq-item reveal d1"><button class="faq-q">Can custom furniture be included?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Custom furniture is included as a design service category and can be discussed as part of your interior requirement.</p></div></div>
+<div class="faq-item reveal d2"><button class="faq-q">How can I discuss my project?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Call +91 91306 60696 or use the WhatsApp button to start an enquiry.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container contact-grid">
+<div class="reveal left"><div class="eyebrow">Start Your Project</div><h2 class="title">Let's design<br><em>something remarkable.</em></h2><p class="copy">Tell us about your space and the kind of environment you want to create.</p>
+<a class="contact-row" href="tel:+919130660696"><div class="contact-icon"><i class="fa-solid fa-phone"></i></div><div><span>Call</span><strong>+91 91306 60696</strong></div></a>
+<a class="contact-row" target="_blank" href="https://wa.me/919130660696"><div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div><div><span>WhatsApp</span><strong>Start a conversation</strong></div></a>
+</div>
+<form class="form reveal right" id="form">
+<div class="form-row"><div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div><div class="field"><label>Phone Number</label><input id="phone" required placeholder="Your phone"></div></div>
+<div class="field"><label>Project Type</label><select id="type"><option>Residential</option><option>Living Room</option><option>Bedroom</option><option>Kitchen</option><option>Bathroom</option><option>Office</option><option>Commercial</option><option>Complete Interior</option><option>Other</option></select></div>
+<div class="field"><label>Message</label><textarea id="message" placeholder="Tell us about your space and requirement..."></textarea></div>
+<button class="btn dark magnetic" style="width:100%" type="submit">Send Enquiry on WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand-col"><div class="footer-brand">DEEPRISE INTERIORS</div><div class="footer-sub">Interior Design Studio</div><p class="footer-copy">Spaces designed with depth and detail. Refined interiors, considered materials and modern living.</p><div class="socials"><a href="tel:+919130660696"><i class="fa-solid fa-phone"></i></a><a target="_blank" href="https://wa.me/919130660696"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+<div><h4>Explore</h4><ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#collections">Collections</a></li><li><a href="#projects">Projects</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+<div><h4>Contact</h4><ul class="footer-links"><li><a href="tel:+919130660696">+91 91306 60696</a></li><li><a target="_blank" href="https://wa.me/919130660696">WhatsApp Enquiry</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Start a Project</a></li></ul></div>
+</div>
+<div class="bottom"><span>© <span id="year"></span> Deeprise Interiors. All Rights Reserved.</span><span>Designed by <strong>Marwar Infotech</strong></span></div>
+</div>
+</footer>
+
+<div class="floaters">
+<a class="float call magnetic" href="tel:+919130660696" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+<a class="float wa magnetic" target="_blank" href="https://wa.me/919130660696?text=Hello%20Deeprise%20Interiors,%20I%20would%20like%20to%20discuss%20an%20interior%20design%20project." aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<script>
+window.addEventListener("load",()=>setTimeout(()=>document.getElementById("loader").classList.add("hide"),800));
+const nav=document.getElementById("nav");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>45),{passive:true});
+
+const menu=document.getElementById("menu"),links=document.getElementById("links");
+menu.onclick=()=>{links.classList.toggle("open");const i=menu.querySelector("i");i.classList.toggle("fa-bars");i.classList.toggle("fa-xmark")};
+document.querySelectorAll(".links a").forEach(a=>a.onclick=()=>{links.classList.remove("open");const i=menu.querySelector("i");i.classList.add("fa-bars");i.classList.remove("fa-xmark")});
+
+const slides=[...document.querySelectorAll(".slide")],dots=[...document.querySelectorAll(".dot")],current=document.getElementById("current");
+let index=0,timer;
+function show(next){
+  next=(next+slides.length)%slides.length;
+  if(next===index)return;
+  const old=slides[index],incoming=slides[next];
+  slides.forEach(s=>s.classList.remove("active","exit"));
+  incoming.style.transform="translateX(100%) scale(1.035)";
+  incoming.style.opacity="1";
+  requestAnimationFrame(()=>{old.classList.add("exit");incoming.classList.add("active")});
+  dots.forEach((d,i)=>d.classList.toggle("active",i===next));
+  current.textContent=String(next+1).padStart(2,"0");
+  index=next;
+}
+function restart(){clearInterval(timer);timer=setInterval(()=>show(index+1),5000)}
+dots.forEach(d=>d.onclick=()=>{show(+d.dataset.i);restart()});restart();
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+if(matchMedia("(pointer:fine)").matches){
+document.querySelectorAll(".magnetic").forEach(el=>{
+el.onmousemove=e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;el.style.transform=`translate(${x*.12}px,${y*.12}px)`};
+el.onmouseleave=()=>el.style.transform="translate(0,0)";
+})}
+
+document.querySelectorAll(".faq-item").forEach(item=>{
+const q=item.querySelector(".faq-q"),a=item.querySelector(".faq-a");
+q.onclick=()=>{const open=item.classList.contains("open");document.querySelectorAll(".faq-item").forEach(x=>{x.classList.remove("open");x.querySelector(".faq-a").style.maxHeight=null});if(!open){item.classList.add("open");a.style.maxHeight=a.scrollHeight+"px"}}
+});
+
+const parallax=document.getElementById("parallax");
+window.addEventListener("scroll",()=>{if(!parallax)return;const r=parallax.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){parallax.style.transform=`translateY(${(innerHeight/2-r.top)*.035}px) scale(1.05)`}}, {passive:true});
+
+document.getElementById("form").onsubmit=e=>{
+e.preventDefault();
+const text=`Hello Deeprise Interiors,
+
+I would like to discuss an interior design project.
+
+Name: ${document.getElementById("name").value}
+Phone: ${document.getElementById("phone").value}
+Project Type: ${document.getElementById("type").value}
+
+Message:
+${document.getElementById("message").value||"I would like to discuss my interior design requirement."}`;
+window.open("https://wa.me/919130660696?text="+encodeURIComponent(text),"_blank");
+};
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
