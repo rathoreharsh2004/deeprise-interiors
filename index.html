@@ -1,298 +1,733 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Deeprise Interiors — refined interior design for residential and commercial spaces.">
-<title>Deeprise Interiors | Luxury Interior Design</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#dcd0c7">
+<title>DEEPRISE INTERIORS — Interior Design Studio</title>
+
+<!-- Fonts kept intentionally restrained to match the supplied reference: clean sans-serif + elegant display hierarchy -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{--ivory:#f8f5ef;--white:#fff;--dark:#211d19;--text:#2b2722;--muted:#756d63;--sand:#e9dfcf;--gold:#ad8d5e;--line:#211d1918;--max:1200px;--shadow:0 24px 65px #211d1918}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--ivory);color:var(--text);overflow-x:hidden}a{text-decoration:none;color:inherit}img{width:100%;display:block}button,input,textarea,select{font:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}section{padding:105px 0}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:17px}.eyebrow:before{content:"";width:34px;height:1px;background:currentColor}.title{font:500 clamp(42px,5.5vw,75px)/1.02 "Playfair Display",serif;letter-spacing:-2px}.title em{font-style:italic;color:#78664e}.copy{color:var(--muted);line-height:1.9;font-size:14px;max-width:650px;margin-top:20px}.center{text-align:center}.center .eyebrow{justify-content:center}.center .copy{margin-left:auto;margin-right:auto}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border:0;border-radius:2px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.25s}.dark{background:var(--dark);color:#fff}.light{background:#fff;color:var(--dark)}.outline{background:#ffffff12;color:#fff;border:1px solid #fff8;backdrop-filter:blur(8px)}.reveal{opacity:0;transform:translateY(42px);transition:.9s cubic-bezier(.22,1,.36,1)}.reveal.left{transform:translateX(-55px)}.reveal.right{transform:translateX(55px)}.reveal.visible{opacity:1;transform:none}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+:root{
+  --cream:#e7ded7;
+  --cream-light:#eee7e0;
+  --cream-dark:#d9cdc4;
+  --ink:#211d1a;
+  --muted:#6d625a;
+  --line:rgba(33,29,26,.16);
+  --brown:#8d5d37;
+  --white:#f8f5f1;
+  --serif: "DM Sans", Arial, sans-serif;
+  --sans: "Manrope", Arial, sans-serif;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream-light);color:var(--ink);
+  font-family:var(--sans);font-weight:400;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+img{max-width:100%;display:block}
+.container{width:min(calc(100% - 120px),var(--max));margin:auto}
+.section{position:relative;padding:118px 0}
+.eyebrow{
+  font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:18px;color:var(--muted)
+}
+h1,h2,h3,p{margin-top:0}
+.display{
+  font-family:var(--serif);font-weight:300;letter-spacing:-.055em;
+  line-height:.92;text-transform:uppercase;
+}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
 
-/* loader */
-.loader{position:fixed;inset:0;background:var(--dark);z-index:9999;display:grid;place-items:center;color:#fff;transition:.7s}.loader.hide{opacity:0;visibility:hidden}.loader-name{font:500 30px "Playfair Display",serif;letter-spacing:2px;text-align:center}.loader-line{height:1px;width:85px;background:var(--gold);margin:15px auto}.loader-sub{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#fff8}
+/* NAV */
+.hero{height:760px;min-height:680px;position:relative;color:#fff;overflow:hidden}
+.hero-media{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  background-image:
+    linear-gradient(rgba(28,20,16,.27),rgba(28,20,16,.43)),
+    url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2200&q=90");
+  transform:scale(1.01);
+}
+.nav{
+  position:absolute;z-index:10;top:0;left:0;right:0;height:78px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6.8%;font-size:10px;text-transform:uppercase;
+}
+.logo{
+  display:flex;align-items:center;gap:9px;letter-spacing:.08em;font-weight:500
+}
+.logo-mark{width:18px;height:18px;border:1px solid rgba(255,255,255,.9);display:grid;place-items:center;font-size:9px}
+.nav-links{display:flex;gap:29px;align-items:center;margin-left:auto;margin-right:55px}
+.nav-links a{opacity:.9;transition:.25s}.nav-links a:hover{opacity:1}
+.nav-cta{
+  border:0;background:#dfc5ad;color:#3a2a1f;padding:12px 23px;
+  border-radius:2px;font-size:9px;text-transform:uppercase;cursor:pointer
+}
+.menu-toggle{
+  width:23px;height:18px;background:none;border:0;padding:0;display:flex;
+  flex-direction:column;justify-content:center;gap:5px;cursor:pointer
+}
+.menu-toggle span{height:1px;background:#fff;width:100%;display:block}
+.hero-content{
+  position:absolute;z-index:2;left:12.5%;right:9%;top:49%;transform:translateY(-35%);
+}
+.hero-title{
+  font-size:clamp(50px,6.1vw,96px);max-width:1050px;position:relative;
+}
+.hero-title .line1{display:block;margin-left:0}
+.hero-title .line2{display:block;text-align:right;margin-right:4%}
+.hero-copy{
+  width:285px;margin:20px 0 0 7%;font-size:9px;line-height:1.7;color:rgba(255,255,255,.92)
+}
+.hero-bottom{
+  position:absolute;bottom:0;left:0;right:0;height:58px;border-top:1px solid rgba(255,255,255,.22);
+  display:grid;grid-template-columns:repeat(3,1fr);align-items:center;padding:0 12%;
+  font-size:9px;color:#fff
+}
+.hero-bottom span{text-align:center}
+.scroll{position:absolute;bottom:70px;right:6.8%;font-size:9px;letter-spacing:.08em;writing-mode:vertical-rl}
 
-/* nav */
-.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;color:#fff;transition:.35s}.nav.scrolled{background:#f8f5eff2;color:var(--dark);backdrop-filter:blur(15px);box-shadow:0 8px 28px #0000000d}.navin{height:86px;display:flex;align-items:center;justify-content:space-between}.brand{font:600 19px "Playfair Display",serif;letter-spacing:1px}.brand small{display:block;font:8px "DM Sans",sans-serif;letter-spacing:2.5px;text-transform:uppercase;opacity:.7;margin-top:2px}.links{display:flex;gap:25px;align-items:center;list-style:none}.links a{font-size:10px;letter-spacing:1px;text-transform:uppercase;position:relative}.links a:not(.cta):after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:currentColor;transition:.3s}.links a:hover:after{width:100%}.cta{background:var(--gold);color:#fff!important;padding:12px 17px}.menu{display:none;background:none;border:0;color:currentColor;font-size:20px}
+/* ABOUT */
+.about{background:var(--cream-light)}
+.about-grid{display:grid;grid-template-columns:170px 1fr 1fr;gap:42px;align-items:center}
+.about-img{height:190px;background:url("https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=800&q=85") center/cover}
+.about-title{font-size:32px;max-width:330px}
+.about-copy{font-size:10px;line-height:1.8;color:var(--muted);max-width:315px}
+.signature{margin-top:25px;text-align:right;font-family:cursive;font-size:32px;transform:rotate(-7deg)}
+.signature-name{text-align:right;font-size:9px;margin-top:2px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:60px}
+.stat-number{font-size:18px;letter-spacing:-.04em}
+.stat-label{font-size:8px;color:var(--muted);margin-top:6px}
 
-/* hero horizontal slider */
-.hero{height:100vh;min-height:650px;position:relative;overflow:hidden;color:#fff;display:flex;align-items:center}.slides,.slide{position:absolute;inset:0}.slide{background:center/cover no-repeat;opacity:0;transform:translateX(100%) scale(1.035);transition:transform 1s cubic-bezier(.77,0,.18,1),opacity 1s}.slide.active{opacity:1;transform:translateX(0) scale(1)}.slide.exit{opacity:1;transform:translateX(-100%) scale(1.02)}.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#17130fba,#17130f55 58%,#17130f20)}.hero-content{position:relative;z-index:3;max-width:820px;padding-top:55px}.hero .eyebrow{color:#dbc29a}.hero h1{font:500 clamp(55px,7.5vw,104px)/.92 "Playfair Display",serif;letter-spacing:-3px}.hero h1 span{color:#dfc392;font-style:italic}.hero p{font-size:15px;line-height:1.85;color:#fffc;max-width:670px;margin:26px 0 32px}.actions{display:flex;gap:11px;flex-wrap:wrap}.hero-meta{position:absolute;z-index:4;bottom:28px;left:50%;transform:translateX(-50%);width:min(var(--max),calc(100% - 40px));display:flex;justify-content:space-between;align-items:center}.count{font-size:9px;letter-spacing:3px}.count strong{font:500 18px "Playfair Display",serif}.dots{display:flex;gap:5px}.dot{width:27px;height:2px;border:0;background:#fff5;cursor:pointer}.dot.active{background:#fff}.scroll{font-size:8px;letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:10px}.scroll:after{content:"";width:45px;height:1px;background:#fff7}
+/* SERVICES */
+.services{background:var(--cream-dark);overflow:hidden}
+.services-head{display:grid;grid-template-columns:1fr 1.35fr 120px;gap:55px;align-items:end;margin-bottom:28px}
+.services-title{font-size:30px;max-width:330px}
+.services-intro{font-size:10px;line-height:1.7;color:var(--muted);max-width:410px}
+.slider-controls{display:flex;justify-content:flex-end;gap:6px}
+.circle{
+  width:28px;height:28px;border-radius:50%;border:0;background:var(--brown);color:#fff;cursor:pointer;font-size:12px
+}
+.cards-viewport{overflow:hidden}
+.service-track{display:flex;gap:13px;transition:transform .65s cubic-bezier(.2,.75,.2,1)}
+.service-card{
+  flex:0 0 178px;height:345px;position:relative;overflow:hidden;background:#b8a89d
+}
+.service-card.large{flex-basis:178px}
+.service-card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 42%,rgba(0,0,0,.72))}
+.service-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.service-card:hover img{transform:scale(1.045)}
+.service-name{
+  position:absolute;z-index:2;left:13px;right:12px;bottom:13px;color:#fff;
+  font-size:16px;line-height:.98;letter-spacing:-.035em;text-transform:uppercase
+}
 
-/* general */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}.about-visual{position:relative;padding-right:55px}.about-main{height:630px;object-fit:cover}.about-small{position:absolute;width:220px;height:270px;right:0;bottom:-30px;object-fit:cover;border:9px solid var(--ivory)}.signature{margin-top:28px;border-top:1px solid var(--line);padding-top:18px;font:italic 21px "Playfair Display",serif;color:#77664f}
-.services{background:#eee6da}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:55px}.service{height:400px;position:relative;overflow:hidden;color:#fff}.service img{height:100%;object-fit:cover;transition:.8s}.service:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fdd,transparent 65%)}.service:hover img{transform:scale(1.07)}.service-info{position:absolute;z-index:2;left:24px;right:24px;bottom:23px}.service-info small{font-size:9px;letter-spacing:2px;color:#e0c79a}.service-info h3{font:500 25px "Playfair Display",serif;margin:6px 0}.service-info p{font-size:11px;line-height:1.7;color:#fff9}.arrow{display:grid;place-items:center;width:33px;height:33px;border:1px solid #fff7;margin-top:13px;transition:.3s}.service:hover .arrow{transform:translateX(7px)}
-.dark-section{background:#28231e;color:#fff}.style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:55px}.style{height:470px;position:relative;overflow:hidden}.style img{height:100%;object-fit:cover;transition:.8s}.style:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fe6,transparent 67%)}.style:hover img{transform:scale(1.06)}.style-info{position:absolute;z-index:2;left:25px;right:25px;bottom:25px}.style-info small{font-size:9px;letter-spacing:2px;color:#dfc395}.style-info h3{font:500 29px "Playfair Display",serif;margin:7px 0}.style-info p{font-size:11px;line-height:1.7;color:#fffb}
-.projects{background:#fff}.project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px;margin-top:55px}.project{grid-column:span 4;height:390px;position:relative;overflow:hidden}.project.wide{grid-column:span 8;height:520px}.project.tall{height:520px}.project img{height:100%;object-fit:cover;transition:.8s}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fcc,transparent 65%)}.project:hover img{transform:scale(1.06)}.project-info{position:absolute;z-index:2;left:23px;bottom:22px;color:#fff}.project-info small{font-size:9px;letter-spacing:2px;color:#dfc395}.project-info h3{font:500 27px "Playfair Display",serif;margin-top:5px}
-.cinema{height:640px;position:relative;overflow:hidden;color:#fff;display:flex;align-items:center}.cinema-bg{position:absolute;inset:-5%;background:url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90") center/cover;transform:scale(1.05)}.cinema:after{content:"";position:absolute;inset:0;background:#17120f70}.cinema-content{position:relative;z-index:2}
-.details{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:50px}.detail-main{height:600px;overflow:hidden}.detail-main img,.detail-img img{height:100%;object-fit:cover;transition:.8s}.detail-main:hover img,.detail-img:hover img{transform:scale(1.05)}.detail-side{display:grid;grid-template-columns:1fr 1fr;gap:16px}.detail-img{height:292px;overflow:hidden}
-.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:55px}.app{height:300px;position:relative;overflow:hidden}.app img{height:100%;object-fit:cover;transition:.7s}.app:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17120fd5,transparent 70%)}.app:hover img{transform:scale(1.06)}.app span{position:absolute;z-index:2;left:20px;bottom:19px;color:#fff;font:500 21px "Playfair Display",serif}
-.process{background:var(--sand)}.process-grid{display:grid;grid-template-columns:repeat(5,1fr);margin-top:55px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:33px 20px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step b{font:38px "Playfair Display",serif;color:var(--gold)}.step h3{font:500 21px "Playfair Display",serif;margin:13px 0 7px}.step p{font-size:11px;line-height:1.7;color:var(--muted)}
-.principles{display:grid;grid-template-columns:1fr 1fr;gap:80px}.principle-list{border-top:1px solid var(--line);margin-top:25px}.principle{display:grid;grid-template-columns:45px 1fr;gap:15px;padding:21px 0;border-bottom:1px solid var(--line)}.principle>span{font:24px "Playfair Display",serif;color:var(--gold)}.principle h3{font:500 20px "Playfair Display",serif}.principle p{font-size:11px;line-height:1.7;color:var(--muted);margin-top:5px}
-.faq{max-width:880px;margin:55px auto 0}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;padding:23px 0;background:none;border:0;display:flex;justify-content:space-between;text-align:left;cursor:pointer;font:500 20px "Playfair Display",serif;color:var(--text)}.faq-q i{transition:.3s}.faq-item.open .faq-q i{transform:rotate(45deg)}.faq-a{max-height:0;overflow:hidden;transition:max-height .4s}.faq-a p{padding:0 30px 23px 0;font-size:12px;line-height:1.8;color:var(--muted)}
-.contact{background:#e7ddce}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px}.contact-row{display:flex;gap:13px;margin:24px 0}.contact-icon{width:43px;height:43px;background:#fff;display:grid;place-items:center;color:var(--gold)}.contact-row span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:4px}.contact-row strong{font-size:14px;font-weight:500}.form{background:#fff;padding:38px;box-shadow:var(--shadow)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:15px}.field label{display:block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--ivory);padding:14px;outline:none}.field textarea{min-height:130px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:#fff}
-footer{background:#211d19;color:#fff;padding:70px 0 23px}.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .8fr;gap:60px;padding-bottom:48px}.footer-brand{font:500 27px "Playfair Display",serif;letter-spacing:1px}.footer-sub{font:8px "DM Sans",sans-serif;letter-spacing:3px;text-transform:uppercase;color:#fff8;margin-top:5px}.footer-copy{max-width:430px;font-size:12px;line-height:1.8;color:#fff8;margin-top:20px}.footer h4{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#dbc091;margin-bottom:18px}.footer-links{list-style:none}.footer-links li{font-size:11px;color:#fff9;margin:11px 0}.socials{display:flex;gap:9px;margin-top:22px}.socials a{width:40px;height:40px;border:1px solid #fff3;display:grid;place-items:center;transition:.3s}.socials a:hover{background:var(--gold);transform:translateY(-3px)}.bottom{border-top:1px solid #fff2;padding-top:20px;display:flex;justify-content:space-between;font-size:9px;color:#fff7}.bottom strong{color:#dbc091}
+/* STYLES */
+.styles{background:var(--cream-light)}
+.styles-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:45px}
+.styles-title{font-size:42px}
+.styles-intro{font-size:10px;line-height:1.7;color:var(--muted);max-width:340px}
+.style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.style-card{height:380px;position:relative;overflow:hidden}
+.style-card img{height:100%;width:100%;object-fit:cover;transition:transform .7s}
+.style-card:hover img{transform:scale(1.04)}
+.style-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.66))}
+.style-card-content{position:absolute;z-index:2;left:18px;right:18px;bottom:18px;color:#fff}
+.style-no{font-size:9px;opacity:.8;margin-bottom:7px}
+.style-name{font-size:20px;line-height:1;text-transform:uppercase;letter-spacing:-.035em}
 
-/* floating left buttons */
-.floaters{position:fixed;left:18px;bottom:22px;z-index:4000;display:flex;flex-direction:column;gap:9px}.float{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 14px 35px #0003;transition:.25s}.float:hover{transform:scale(1.08)}.call{background:var(--dark)}.wa{background:#4f7f59}
+/* VISUAL COLLECTION */
+.inspiration{background:#ddd2ca}
+.inspiration-head{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:end;margin-bottom:38px}
+.inspiration-title{font-size:40px}
+.inspiration-copy{font-size:10px;line-height:1.7;color:var(--muted);max-width:450px}
+.inspiration-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.inspiration-card{height:430px;position:relative;overflow:hidden}
+.inspiration-card:nth-child(even){margin-top:38px}
+.inspiration-card img{width:100%;height:100%;object-fit:cover}
+.inspiration-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.66))}
+.inspiration-card div{position:absolute;z-index:2;left:15px;bottom:15px;color:#fff}
+.inspiration-card small{font-size:8px;text-transform:uppercase}
+.inspiration-card strong{display:block;font-size:18px;line-height:1;text-transform:uppercase;margin-top:5px}
 
-@media(max-width:1050px){.links{gap:14px}.about,.principles,.contact-grid{grid-template-columns:1fr;gap:50px}.service-grid{grid-template-columns:1fr 1fr}.app-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2n){border-right:0}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand-col{grid-column:span 2}}
-@media(max-width:800px){.menu{display:block}.links{position:fixed;top:78px;left:14px;right:14px;padding:25px;background:#fffefa;color:var(--dark);display:flex;flex-direction:column;align-items:flex-start;gap:20px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(-10px);transition:.3s}.links.open{opacity:1;pointer-events:auto;transform:none}.hero h1{font-size:57px}.style-grid{grid-template-columns:1fr}.project-grid{display:block}.project,.project.wide,.project.tall{height:400px;margin-bottom:15px}}
-@media(max-width:600px){.container{width:calc(100% - 28px)}section{padding:80px 0}.hero h1{font-size:48px}.hero-actions .btn{width:100%}.hero-meta .scroll{display:none}.about-main{height:430px}.about-small{width:150px;height:190px;border-width:7px;right:-2px;bottom:-18px}.service-grid,.app-grid{grid-template-columns:1fr}.service{height:370px}.details{grid-template-columns:1fr}.detail-main{height:430px}.detail-img{height:205px}.process-grid{grid-template-columns:1fr}.step,.step:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}.form-row{grid-template-columns:1fr}.form{padding:24px}.footer-grid{grid-template-columns:1fr}.footer-brand-col{grid-column:auto}.bottom{flex-direction:column;gap:8px}.floaters{left:11px;bottom:13px}.float{width:46px;height:46px}}
+/* ATMOSPHERE */
+.atmosphere{
+  min-height:560px;background:
+    linear-gradient(rgba(32,25,21,.32),rgba(32,25,21,.55)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90") center/cover;
+  color:#fff;display:flex;align-items:flex-end
+}
+.atmosphere .container{padding-bottom:80px}
+.atmosphere-title{font-size:64px;max-width:650px}
+.atmosphere-copy{font-size:11px;max-width:370px;line-height:1.7}
+
+/* DETAILS */
+.details{background:var(--cream-light)}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail-image{height:470px;overflow:hidden}
+.detail-image img{width:100%;height:100%;object-fit:cover}
+.detail-text{display:flex;flex-direction:column;justify-content:center;padding:50px}
+.detail-title{font-size:43px;max-width:450px}
+.detail-copy{font-size:10px;line-height:1.8;color:var(--muted);max-width:380px}
+
+/* APPLICATIONS */
+.applications{background:var(--cream-dark)}
+.app-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:70px;align-items:start}
+.app-title{font-size:42px}
+.app-list{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.app-item{padding:28px 0;border-bottom:1px solid var(--line);font-size:18px}
+.app-item span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px}
+
+/* PROCESS */
+.process{background:var(--cream-light)}
+.process-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}
+.process-title{font-size:43px}
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.process-item{padding:35px 18px 20px 0;border-right:1px solid var(--line);min-height:200px}
+.process-item:not(:first-child){padding-left:18px}
+.process-number{font-size:9px;color:var(--brown);margin-bottom:32px}
+.process-name{font-size:21px;text-transform:uppercase;margin-bottom:13px}
+.process-copy{font-size:9px;color:var(--muted);line-height:1.65;max-width:180px}
+
+/* PRINCIPLES */
+.principles{background:#e3d8d0}
+.principles-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:55px}
+.principles-title{font-size:45px}
+.principles-intro{font-size:10px;color:var(--muted);line-height:1.8;max-width:390px}
+.principles-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.principle{padding:28px 22px 0 0;border-right:1px solid var(--line)}
+.principle:not(:first-child){padding-left:20px}
+.principle-no{font-size:9px;color:var(--brown)}
+.principle-name{font-size:19px;text-transform:uppercase;margin:25px 0 13px}
+.principle-copy{font-size:9px;color:var(--muted);line-height:1.7}
+
+/* TESTIMONIAL */
+.testimonial{
+  min-height:500px;color:#fff;display:flex;align-items:center;
+  background:
+    linear-gradient(rgba(35,27,22,.44),rgba(35,27,22,.55)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90") center/cover;
+}
+.quote{max-width:800px;margin:auto;text-align:center}
+.quote-label{font-size:9px;text-transform:uppercase;margin-bottom:30px}
+.stars{letter-spacing:5px;font-size:12px;margin-bottom:23px}
+.quote-text{font-size:clamp(30px,4vw,57px);line-height:.98;text-transform:uppercase;letter-spacing:-.045em}
+.quote-author{font-size:9px;margin-top:22px}
+
+/* FAQ */
+.faq{background:var(--cream-light)}
+.faq-grid{display:grid;grid-template-columns:.7fr 1.5fr;gap:90px}
+.faq-title{font-size:46px}
+.faq-intro{font-size:10px;color:var(--muted);line-height:1.8;max-width:280px}
+.faq-item{border-top:1px solid var(--line)}
+.faq-q{
+  width:100%;background:none;border:0;padding:22px 0;display:flex;justify-content:space-between;
+  align-items:center;text-align:left;font-size:14px;color:var(--ink);cursor:pointer
+}
+.faq-q span:last-child{font-size:20px;font-weight:300}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease;padding-right:60px}
+.faq-a p{font-size:10px;line-height:1.8;color:var(--muted);padding-bottom:20px}
+.faq-item.open .faq-a{max-height:180px}
+
+/* CONTACT */
+.contact{background:#2a211c;color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+.contact-title{font-size:62px;max-width:600px}
+.contact-copy{font-size:10px;line-height:1.8;color:rgba(255,255,255,.63);max-width:380px}
+.contact-line{margin-top:30px;font-size:13px}
+.contact-line strong{display:block;font-size:9px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:7px}
+.form{display:grid;gap:12px}
+.form input,.form textarea,.form select{
+  width:100%;border:0;border-bottom:1px solid rgba(255,255,255,.28);background:transparent;
+  color:#fff;padding:14px 0;outline:none;font-size:11px
+}
+.form select option{color:#211d1a}
+.form textarea{min-height:100px;resize:vertical}
+.form button{
+  margin-top:12px;width:max-content;border:0;background:#d6b99e;color:#2a211c;
+  padding:14px 25px;text-transform:uppercase;font-size:9px;cursor:pointer
+}
+
+/* FOOTER */
+footer{background:#1d1714;color:#fff;padding:65px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:70px}
+.footer-brand{font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+.footer-copy{font-size:9px;line-height:1.8;color:rgba(255,255,255,.52);max-width:300px;margin-top:15px}
+.footer-heading{font-size:9px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px}
+.footer-links{display:grid;gap:10px;font-size:10px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:50px;padding-top:20px;display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,.42)}
+
+/* FULLSCREEN MENU */
+.menu-overlay{
+  position:fixed;inset:0;background:#27201b;color:#fff;z-index:100;
+  display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:.35s
+}
+.menu-overlay.open{visibility:visible;opacity:1}
+.menu-close{position:absolute;right:6.8%;top:28px;background:none;border:0;color:#fff;font-size:27px;cursor:pointer}
+.menu-links{display:grid;gap:14px;text-align:center}
+.menu-links a{font-size:clamp(32px,5vw,70px);font-weight:300;letter-spacing:-.05em;text-transform:uppercase;transition:.25s}
+.menu-links a:hover{opacity:.45}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{width:min(calc(100% - 40px),var(--max))}
+  .nav{padding:0 20px}.nav-links,.nav-cta{display:none}
+  .hero{height:690px}
+  .hero-content{left:20px;right:20px}
+  .hero-title{font-size:clamp(42px,10vw,72px)}
+  .hero-title .line2{margin-right:0}
+  .hero-copy{margin-left:4%;width:250px}
+  .hero-bottom{padding:0 20px;font-size:7px}
+  .scroll{right:20px}
+  .about-grid{grid-template-columns:150px 1fr;gap:25px}
+  .about-copy{grid-column:1/-1;max-width:600px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .services-head,.inspiration-head,.principles-head{grid-template-columns:1fr;display:grid;gap:18px}
+  .style-grid{grid-template-columns:repeat(2,1fr)}
+  .inspiration-grid{grid-template-columns:repeat(3,1fr)}
+  .inspiration-card:nth-child(even){margin-top:0}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .process-item{border-bottom:1px solid var(--line)}
+  .principles-grid{grid-template-columns:repeat(2,1fr)}
+  .principle{border-bottom:1px solid var(--line)}
+  .faq-grid{grid-template-columns:1fr;gap:35px}
+  .contact-grid{grid-template-columns:1fr;gap:55px}
+}
+@media(max-width:560px){
+  .section{padding:78px 0}
+  .about-grid{grid-template-columns:1fr}
+  .about-img{height:250px}
+  .stats{gap:25px}
+  .service-card{flex-basis:235px;height:360px}
+  .style-grid,.inspiration-grid,.app-grid,.process-grid,.principles-grid,.detail-grid,.footer-grid{grid-template-columns:1fr}
+  .inspiration-card{height:420px}
+  .contact-title{font-size:48px}
+  .footer-bottom{flex-direction:column;gap:10px}
+  .hero-bottom{grid-template-columns:1fr 1fr 1fr}
+  .hero-bottom span:nth-child(3){display:none}
+}
+
+/* Prevent browser default focus outlines from disturbing the visual system while retaining accessible focus */
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
 </style>
 </head>
+
 <body>
 
-<div class="loader" id="loader"><div><div class="loader-name">DEEPRISE INTERIORS</div><div class="loader-line"></div><div class="loader-sub">Interior Design Studio</div></div></div>
-
-<header class="nav" id="nav">
-<div class="container navin">
-<a class="brand" href="#home">DEEPRISE INTERIORS<small>Interior Design Studio</small></a>
-<nav><ul class="links" id="links">
-<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#collections">Collections</a></li><li><a href="#projects">Projects</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li><li><a class="cta" href="#contact">Start a Project</a></li>
-</ul></nav>
-<button class="menu" id="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+<!-- MENU -->
+<div class="menu-overlay" id="menu">
+  <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
+  <nav class="menu-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#styles">Collections</a>
+    <a href="#inspiration">Projects</a>
+    <a href="#process">Process</a>
+    <a href="#inspiration">Gallery</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Start a Project</a>
+  </nav>
 </div>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-media"></div>
+  <div class="nav">
+    <a href="#home" class="logo">
+      <span class="logo-mark">D</span>
+      <span>DEEPRISE INTERIORS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#styles">Collections</a>
+      <a href="#inspiration">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Start a Project</a>
+    <button class="menu-toggle" id="menuOpen" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+
+  <div class="hero-content">
+    <h1 class="display hero-title">
+      <span class="line1">SPACES THAT SPEAK</span>
+      <span class="line2">WITHOUT SAYING A WORD.</span>
+    </h1>
+    <p class="hero-copy">Thoughtfully designed interiors where architecture, materials and everyday living come together.</p>
+  </div>
+
+  <div class="scroll">SCROLL TO EXPLORE</div>
+  <div class="hero-bottom">
+    <span>Architecture &amp; Interior</span>
+    <span>Considered Material Selection</span>
+    <span>Refined Design Concepts</span>
+  </div>
 </header>
 
-<section class="hero" id="home">
-<div class="slides">
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90')"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2200&q=90')"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90')"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=90')"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=90')"></div>
-</div>
-<div class="container">
-<div class="hero-content">
-<div class="eyebrow reveal">DEEPRISE INTERIORS</div>
-<h1 class="reveal d1">Spaces that speak<br><span>without saying a word.</span></h1>
-<p class="reveal d2">Thoughtfully designed interiors where architecture, materials and everyday living come together.</p>
-<div class="actions reveal d3"><a class="btn light magnetic" href="#projects">Explore Our Work <i class="fa-solid fa-arrow-right"></i></a><a class="btn outline magnetic" href="#contact">Start Your Project</a></div>
-</div>
-</div>
-<div class="hero-meta">
-<div class="count"><strong id="current">01</strong> / 05</div>
-<div class="dots"><button class="dot active" data-i="0"></button><button class="dot" data-i="1"></button><button class="dot" data-i="2"></button><button class="dot" data-i="3"></button><button class="dot" data-i="4"></button></div>
-<div class="scroll">Scroll to explore</div>
-</div>
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid reveal">
+      <div class="about-img"></div>
+      <div>
+        <div class="eyebrow">About Us</div>
+        <h2 class="display about-title">DESIGNING SPACES WITH DEPTH AND DETAIL.</h2>
+      </div>
+      <div class="about-copy">
+        DEEPRISE INTERIORS focuses on thoughtfully designed, refined and functional environments where architecture, materials, furniture and everyday living work together.<br><br>
+        The aim is simple: create interiors that feel considered, comfortable and visually cohesive without unnecessary decoration.
+        <div class="signature">Deeprise</div>
+        <div class="signature-name">DEEPRISE INTERIORS</div>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div><div class="stat-number">08+</div><div class="stat-label">Design Services</div></div>
+      <div><div class="stat-number">06+</div><div class="stat-label">Curated Interior Styles</div></div>
+      <div><div class="stat-number">05</div><div class="stat-label">Design Process Stages</div></div>
+      <div><div class="stat-number">∞</div><div class="stat-label">Possibilities for Your Space</div></div>
+    </div>
+  </div>
 </section>
 
-<section id="about">
-<div class="container about">
-<div class="about-visual reveal left"><img class="about-main" src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1500&q=90" alt="Luxury contemporary living room"><img class="about-small" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=90" alt="Modern interior detail"></div>
-<div class="reveal right"><div class="eyebrow">The Deeprise Approach</div><h2 class="title">Designing spaces<br><em>with depth and detail.</em></h2><p class="copy">DEEPRISE INTERIORS focuses on thoughtfully designed, refined and functional environments where architecture, materials, furniture and everyday living work together.</p><p class="copy">The aim is simple: create interiors that feel considered, comfortable and visually cohesive without unnecessary decoration.</p><div class="signature">Every space deserves its own atmosphere.</div><a class="btn dark magnetic" href="#services" style="margin-top:28px">Discover Our Approach <i class="fa-solid fa-arrow-right"></i></a></div>
-</div>
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="services-head reveal">
+      <div>
+        <div class="eyebrow">Our Services</div>
+        <h2 class="display services-title">INTERIOR DESIGN, CONSIDERED FROM EVERY ANGLE.</h2>
+      </div>
+      <p class="services-intro">Image-led interior solutions for residential and commercial environments, designed around how spaces are experienced every day.</p>
+      <div class="slider-controls">
+        <button class="circle" id="servicePrev" aria-label="Previous service">‹</button>
+        <button class="circle" id="serviceNext" aria-label="Next service">›</button>
+      </div>
+    </div>
+
+    <div class="cards-viewport">
+      <div class="service-track" id="serviceTrack">
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"><div class="service-name">RESIDENTIAL<br>INTERIORS</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85"><div class="service-name">LIVING ROOM<br>DESIGN</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85"><div class="service-name">BEDROOM<br>INTERIORS</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"><div class="service-name">MODULAR<br>KITCHENS</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"><div class="service-name">BATHROOM<br>INTERIORS</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"><div class="service-name">OFFICE &amp;<br>COMMERCIAL</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85"><div class="service-name">CUSTOM<br>FURNITURE</div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85"><div class="service-name">COMPLETE<br>INTERIORS</div></article>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="services" id="services">
-<div class="container">
-<div class="center reveal"><div class="eyebrow">What We Design</div><h2 class="title">Interior Design,<br><em>considered from every angle.</em></h2><p class="copy">Image-led interior solutions for residential and commercial environments, designed around how spaces are experienced every day.</p></div>
-<div class="service-grid">
-<div class="service reveal"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90" alt="Residential luxury interior"><div class="service-info"><small>01 / 08</small><h3>Residential Interiors</h3><p>Refined interiors designed around comfort, function and personal character.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal d1"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90" alt="Luxury living room"><div class="service-info"><small>02 / 08</small><h3>Living Room Design</h3><p>Layered furniture, lighting and materials for welcoming living spaces.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal d2"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90" alt="Luxury bedroom interior"><div class="service-info"><small>03 / 08</small><h3>Bedroom Interiors</h3><p>Calm, comfortable bedroom environments with carefully considered details.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal d3"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=90" alt="Modern kitchen"><div class="service-info"><small>04 / 08</small><h3>Modular Kitchens</h3><p>Functional kitchen environments balancing storage, workflow and visual harmony.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90" alt="Luxury bathroom"><div class="service-info"><small>05 / 08</small><h3>Bathroom Interiors</h3><p>Modern bathroom compositions using refined surfaces, fixtures and lighting.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal d1"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90" alt="Modern office"><div class="service-info"><small>06 / 08</small><h3>Office & Commercial</h3><p>Professional environments designed for clarity, comfort and contemporary work.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal d2"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=90" alt="Custom furniture"><div class="service-info"><small>07 / 08</small><h3>Custom Furniture</h3><p>Built-in and freestanding furniture concepts that connect the room together.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-<div class="service reveal d3"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=90" alt="Complete interior"><div class="service-info"><small>08 / 08</small><h3>Complete Interiors</h3><p>A cohesive approach bringing architecture, furniture, lighting and finishes together.</p><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></div></div>
-</div>
-</div>
+<!-- STYLES -->
+<section class="section styles" id="styles">
+  <div class="container">
+    <div class="styles-head reveal">
+      <div>
+        <div class="eyebrow">Curated Interior Styles</div>
+        <h2 class="display styles-title">A VISUAL LANGUAGE<br>FOR EVERY MOOD.</h2>
+      </div>
+      <p class="styles-intro">Explore different directions in contemporary interior design through curated visual references.</p>
+    </div>
+
+    <div class="style-grid">
+      <article class="style-card reveal"><img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1000&q=85"><div class="style-card-content"><div class="style-no">01 / STYLE</div><div class="style-name">MODERN MINIMAL</div></div></article>
+      <article class="style-card reveal"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1000&q=85"><div class="style-card-content"><div class="style-no">02 / STYLE</div><div class="style-name">WARM CONTEMPORARY</div></div></article>
+      <article class="style-card reveal"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"><div class="style-card-content"><div class="style-no">03 / STYLE</div><div class="style-name">LUXURY MODERN</div></div></article>
+      <article class="style-card reveal"><img src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1000&q=85"><div class="style-card-content"><div class="style-no">04 / STYLE</div><div class="style-name">EARTHEN LIVING</div></div></article>
+      <article class="style-card reveal"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"><div class="style-card-content"><div class="style-no">05 / STYLE</div><div class="style-name">TIMELESS CLASSIC</div></div></article>
+      <article class="style-card reveal"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"><div class="style-card-content"><div class="style-no">06 / STYLE</div><div class="style-name">URBAN SOPHISTICATION</div></div></article>
+    </div>
+  </div>
 </section>
 
-<section class="dark-section" id="collections">
-<div class="container">
-<div class="reveal"><div class="eyebrow">Curated Interior Styles</div><h2 class="title">A visual language<br><em>for every mood.</em></h2><p class="copy" style="color:#fff9">Explore different directions in contemporary interior design through curated visual references.</p></div>
-<div class="style-grid">
-<div class="style reveal"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=90" alt="Modern minimal interior"><div class="style-info"><small>01 / Style</small><h3>Modern Minimal</h3><p>Clean lines, restrained materials and calm spaces.</p></div></div>
-<div class="style reveal d1"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90" alt="Warm contemporary interior"><div class="style-info"><small>02 / Style</small><h3>Warm Contemporary</h3><p>Warm woods, soft textures and sophisticated neutrals.</p></div></div>
-<div class="style reveal d2"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90" alt="Luxury modern interior"><div class="style-info"><small>03 / Style</small><h3>Luxury Modern</h3><p>Premium materials, architectural lighting and refined details.</p></div></div>
-<div class="style reveal"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90" alt="Organic interior"><div class="style-info"><small>04 / Style</small><h3>Earthen Living</h3><p>Natural materials, organic textures and warm tones.</p></div></div>
-<div class="style reveal d1"><img src="https://images.unsplash.com/photo-1600607688960-e095ff83135c?auto=format&fit=crop&w=1400&q=90" alt="Classic interior"><div class="style-info"><small>05 / Style</small><h3>Timeless Classic</h3><p>Elegant proportions and timeless interior details.</p></div></div>
-<div class="style reveal d2"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1400&q=90" alt="Urban interior"><div class="style-info"><small>06 / Style</small><h3>Urban Sophistication</h3><p>Contemporary spaces with a refined metropolitan character.</p></div></div>
-</div>
-</div>
+<!-- INSPIRATION / PROJECTS -->
+<section class="section inspiration" id="inspiration">
+  <div class="container">
+    <div class="inspiration-head reveal">
+      <div>
+        <div class="eyebrow">Interior Inspiration</div>
+        <h2 class="display inspiration-title">SPACES WORTH EXPERIENCING.</h2>
+      </div>
+      <p class="inspiration-copy">A curated visual collection of interior concepts and architectural inspiration. These images are references, not confirmed Deeprise Interiors projects.</p>
+    </div>
+    <div class="inspiration-grid">
+      <article class="inspiration-card reveal"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"><div><small>Living</small><strong>Contemporary Living</strong></div></article>
+      <article class="inspiration-card reveal"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85"><div><small>Bedroom</small><strong>Quiet Retreat</strong></div></article>
+      <article class="inspiration-card reveal"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"><div><small>Kitchen</small><strong>Modern Kitchen</strong></div></article>
+      <article class="inspiration-card reveal"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"><div><small>Bathroom</small><strong>Refined Bath</strong></div></article>
+      <article class="inspiration-card reveal"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"><div><small>Office</small><strong>Contemporary Workspace</strong></div></article>
+    </div>
+  </div>
 </section>
 
-<section class="projects" id="projects">
-<div class="container">
-<div class="center reveal"><div class="eyebrow">Interior Inspiration</div><h2 class="title">Spaces worth <em>experiencing.</em></h2><p class="copy">A curated visual collection of interior concepts and architectural inspiration. These images are references, not confirmed Deeprise Interiors projects.</p></div>
-<div class="project-grid">
-<div class="project wide reveal left"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90" alt="Luxury living room concept"><div class="project-info"><small>Living</small><h3>Contemporary Living</h3></div></div>
-<div class="project tall reveal right"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90" alt="Luxury bedroom concept"><div class="project-info"><small>Bedroom</small><h3>Quiet Retreat</h3></div></div>
-<div class="project reveal"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=90" alt="Modern kitchen concept"><div class="project-info"><small>Kitchen</small><h3>Modern Kitchen</h3></div></div>
-<div class="project reveal d1"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90" alt="Luxury bathroom concept"><div class="project-info"><small>Bathroom</small><h3>Refined Bath</h3></div></div>
-<div class="project wide reveal d2"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=90" alt="Modern office concept"><div class="project-info"><small>Office</small><h3>Contemporary Workspace</h3></div></div>
-</div>
-</div>
+<!-- ATMOSPHERE -->
+<section class="section atmosphere">
+  <div class="container reveal">
+    <div class="eyebrow" style="color:rgba(255,255,255,.75)">The Atmosphere</div>
+    <h2 class="display atmosphere-title">GOOD DESIGN CHANGES HOW A SPACE FEELS.</h2>
+    <p class="atmosphere-copy">From proportion and lighting to materials and furniture, every detail contributes to the atmosphere.</p>
+  </div>
 </section>
 
-<section class="cinema">
-<div class="cinema-bg" id="parallax"></div>
-<div class="container"><div class="cinema-content reveal"><div class="eyebrow">The Atmosphere</div><h2 class="title">Good design changes<br><em>how a space feels.</em></h2><p class="copy" style="color:#fffb">From proportion and lighting to materials and furniture, every detail contributes to the atmosphere.</p></div></div>
+<!-- DETAILS -->
+<section class="section details">
+  <div class="container">
+    <div class="detail-grid reveal">
+      <div class="detail-image"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=90"></div>
+      <div class="detail-text">
+        <div class="eyebrow">Details</div>
+        <h2 class="display detail-title">DETAILS MAKE THE DIFFERENCE.</h2>
+        <p class="detail-copy">Close-up references of materials, lighting, furniture and architectural details that shape a finished interior.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="gallery">
-<div class="container">
-<div class="reveal"><div class="eyebrow">Details</div><h2 class="title">Details make<br><em>the difference.</em></h2><p class="copy">Close-up references of materials, lighting, furniture and architectural details that shape a finished interior.</p></div>
-<div class="details">
-<div class="detail-main reveal left"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=90" alt="Luxury interior detail"></div>
-<div class="detail-side">
-<div class="detail-img reveal d1"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=90" alt="Interior detail"></div>
-<div class="detail-img reveal d2"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=90" alt="Furniture detail"></div>
-<div class="detail-img reveal d3"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=90" alt="Warm interior detail"></div>
-<div class="detail-img reveal d4"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=90" alt="Natural interior texture"></div>
-</div>
-</div>
-</div>
+<!-- APPLICATIONS -->
+<section class="section applications">
+  <div class="container">
+    <div class="app-grid reveal">
+      <div>
+        <div class="eyebrow">Applications</div>
+        <h2 class="display app-title">DESIGNED FOR REAL LIFE.</h2>
+      </div>
+      <div class="app-list">
+        <div class="app-item"><span>01</span>Luxury Homes</div>
+        <div class="app-item"><span>02</span>Apartments</div>
+        <div class="app-item"><span>03</span>Modern Villas</div>
+        <div class="app-item"><span>04</span>Offices</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section style="background:#eee6da">
-<div class="container">
-<div class="center reveal"><div class="eyebrow">Applications</div><h2 class="title">Designed for <em>real life.</em></h2><p class="copy">Interior concepts across residential and commercial environments.</p></div>
-<div class="app-grid">
-<div class="app reveal"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=90" alt="Luxury home"><span>Luxury Homes</span></div>
-<div class="app reveal d1"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=90" alt="Modern apartment"><span>Apartments</span></div>
-<div class="app reveal d2"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=90" alt="Modern villa"><span>Modern Villas</span></div>
-<div class="app reveal d3"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=90" alt="Office interior"><span>Offices</span></div>
-</div>
-</div>
+<!-- PROCESS -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="process-head reveal">
+      <div>
+        <div class="eyebrow">Our Process</div>
+        <h2 class="display process-title">FROM FIRST THOUGHT<br>TO FINISHED SPACE.</h2>
+      </div>
+      <p class="styles-intro">A considered process keeps the design direction, details and finished atmosphere aligned.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-item reveal"><div class="process-number">01 —</div><div class="process-name">Discover</div><div class="process-copy">Understand the space, requirements and lifestyle.</div></div>
+      <div class="process-item reveal"><div class="process-number">02 —</div><div class="process-name">Concept</div><div class="process-copy">Develop the visual direction and design language.</div></div>
+      <div class="process-item reveal"><div class="process-number">03 —</div><div class="process-name">Design</div><div class="process-copy">Refine layouts, materials, furniture and details.</div></div>
+      <div class="process-item reveal"><div class="process-number">04 —</div><div class="process-name">Execute</div><div class="process-copy">Bring the approved design into the physical space.</div></div>
+      <div class="process-item reveal"><div class="process-number">05 —</div><div class="process-name">Reveal</div><div class="process-copy">Complete the space as one cohesive environment.</div></div>
+    </div>
+  </div>
 </section>
 
-<section class="process" id="process">
-<div class="container">
-<div class="reveal"><div class="eyebrow">Our Process</div><h2 class="title">From first thought<br><em>to finished space.</em></h2><p class="copy">A considered process keeps the design direction, details and finished atmosphere aligned.</p></div>
-<div class="process-grid">
-<div class="step reveal"><b>01</b><h3>Discover</h3><p>Understand the space, requirements and lifestyle.</p></div>
-<div class="step reveal d1"><b>02</b><h3>Concept</h3><p>Develop the visual direction and design language.</p></div>
-<div class="step reveal d2"><b>03</b><h3>Design</h3><p>Refine layouts, materials, furniture and details.</p></div>
-<div class="step reveal d3"><b>04</b><h3>Execute</h3><p>Bring the approved design into the physical space.</p></div>
-<div class="step reveal d4"><b>05</b><h3>Reveal</h3><p>Complete the space as one cohesive environment.</p></div>
-</div>
-</div>
+<!-- PRINCIPLES -->
+<section class="section principles">
+  <div class="container">
+    <div class="principles-head reveal">
+      <div>
+        <div class="eyebrow">Design Principles</div>
+        <h2 class="display principles-title">DESIGNED<br>WITH INTENTION.</h2>
+      </div>
+      <p class="principles-intro">A refined interior is about how materials, proportions, light and function work together.</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle reveal"><div class="principle-no">01</div><div class="principle-name">Function First</div><div class="principle-copy">Spaces should work naturally around everyday life.</div></div>
+      <div class="principle reveal"><div class="principle-no">02</div><div class="principle-name">Timeless Aesthetics</div><div class="principle-copy">Strong proportions and restrained choices create lasting visual appeal.</div></div>
+      <div class="principle reveal"><div class="principle-no">03</div><div class="principle-name">Material Harmony</div><div class="principle-copy">Textures, finishes and surfaces should feel connected.</div></div>
+      <div class="principle reveal"><div class="principle-no">04</div><div class="principle-name">Attention to Detail</div><div class="principle-copy">Small details are what make a finished room feel complete.</div></div>
+    </div>
+  </div>
 </section>
 
-<section>
-<div class="container principles">
-<div class="reveal left"><div class="eyebrow">Design Principles</div><h2 class="title">Designed<br><em>with intention.</em></h2><p class="copy">A refined interior is about how materials, proportions, light and function work together.</p></div>
-<div class="principle-list">
-<div class="principle reveal"><span>01</span><div><h3>Function First</h3><p>Spaces should work naturally around everyday life.</p></div></div>
-<div class="principle reveal d1"><span>02</span><div><h3>Timeless Aesthetics</h3><p>Strong proportions and restrained choices create lasting visual appeal.</p></div></div>
-<div class="principle reveal d2"><span>03</span><div><h3>Material Harmony</h3><p>Textures, finishes and surfaces should feel connected.</p></div></div>
-<div class="principle reveal d3"><span>04</span><div><h3>Attention to Detail</h3><p>Small details are what make a finished room feel complete.</p></div></div>
-</div>
-</div>
+<!-- TESTIMONIAL -->
+<section class="section testimonial">
+  <div class="container quote reveal">
+    <div class="quote-label">Testimonials</div>
+    <div class="stars">★★★★★</div>
+    <div class="display quote-text">DESIGN THAT FEELS CONSIDERED, COMFORTABLE AND VISUALLY COHESIVE.</div>
+    <div class="quote-author">DEEPRISE INTERIORS</div>
+  </div>
 </section>
 
-<section id="faq" style="background:#fff">
-<div class="container">
-<div class="center reveal"><div class="eyebrow">FAQ</div><h2 class="title">Questions,<br><em>answered.</em></h2></div>
-<div class="faq">
-<div class="faq-item reveal"><button class="faq-q">What type of interiors does Deeprise Interiors design?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Deeprise Interiors is presented here as an interior design studio for residential and commercial interior environments.</p></div></div>
-<div class="faq-item reveal d1"><button class="faq-q">Do you work on residential interiors?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Yes. The website includes residential interior concepts such as living rooms, bedrooms, kitchens and bathrooms.</p></div></div>
-<div class="faq-item reveal d2"><button class="faq-q">Can you design kitchens and bedrooms?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Kitchen and bedroom interior design are included in the service presentation on this website.</p></div></div>
-<div class="faq-item reveal d3"><button class="faq-q">Do you handle complete interior projects?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Complete interior solutions are included as a service category. Contact Deeprise Interiors to discuss the exact scope of your project.</p></div></div>
-<div class="faq-item reveal"><button class="faq-q">Do you design office and commercial interiors?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Office and commercial interiors are included among the design applications presented on the website.</p></div></div>
-<div class="faq-item reveal d1"><button class="faq-q">Can custom furniture be included?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Custom furniture is included as a design service category and can be discussed as part of your interior requirement.</p></div></div>
-<div class="faq-item reveal d2"><button class="faq-q">How can I discuss my project?<i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Call +91 91306 60696 or use the WhatsApp button to start an enquiry.</p></div></div>
-</div>
-</div>
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="display faq-title">QUESTIONS,<br>ANSWERED.</h2>
+        <p class="faq-intro">Everything you need to know before discussing your interior project with Deeprise Interiors.</p>
+      </div>
+      <div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What type of interiors does Deeprise Interiors design?<span>+</span></button>
+          <div class="faq-a"><p>Deeprise Interiors is presented here as an interior design studio for residential and commercial interior environments.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you work on residential interiors?<span>+</span></button>
+          <div class="faq-a"><p>Yes. The website includes residential interior concepts such as living rooms, bedrooms, kitchens and bathrooms.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Can you design kitchens and bedrooms?<span>+</span></button>
+          <div class="faq-a"><p>Kitchen and bedroom interior design are included in the service presentation on this website.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you handle complete interior projects?<span>+</span></button>
+          <div class="faq-a"><p>Complete interior solutions are included as a service category. Contact Deeprise Interiors to discuss the exact scope of your project.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you design office and commercial interiors?<span>+</span></button>
+          <div class="faq-a"><p>Office and commercial interiors are included among the design applications presented on the website.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Can custom furniture be included?<span>+</span></button>
+          <div class="faq-a"><p>Custom furniture is included as a design service category and can be discussed as part of your interior requirement.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">How can I discuss my project?<span>+</span></button>
+          <div class="faq-a"><p>Call +91 91306 60696 or use the WhatsApp button to start an enquiry.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="contact" id="contact">
-<div class="container contact-grid">
-<div class="reveal left"><div class="eyebrow">Start Your Project</div><h2 class="title">Let's design<br><em>something remarkable.</em></h2><p class="copy">Tell us about your space and the kind of environment you want to create.</p>
-<a class="contact-row" href="tel:+919130660696"><div class="contact-icon"><i class="fa-solid fa-phone"></i></div><div><span>Call</span><strong>+91 91306 60696</strong></div></a>
-<a class="contact-row" target="_blank" href="https://wa.me/919130660696"><div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div><div><span>WhatsApp</span><strong>Start a conversation</strong></div></a>
-</div>
-<form class="form reveal right" id="form">
-<div class="form-row"><div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div><div class="field"><label>Phone Number</label><input id="phone" required placeholder="Your phone"></div></div>
-<div class="field"><label>Project Type</label><select id="type"><option>Residential</option><option>Living Room</option><option>Bedroom</option><option>Kitchen</option><option>Bathroom</option><option>Office</option><option>Commercial</option><option>Complete Interior</option><option>Other</option></select></div>
-<div class="field"><label>Message</label><textarea id="message" placeholder="Tell us about your space and requirement..."></textarea></div>
-<button class="btn dark magnetic" style="width:100%" type="submit">Send Enquiry on WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
-</form>
-</div>
-</section>
-</main>
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="color:rgba(255,255,255,.5)">Start Your Project</div>
+        <h2 class="display contact-title">LET'S DESIGN SOMETHING REMARKABLE.</h2>
+        <p class="contact-copy">Tell us about your space and the kind of environment you want to create.</p>
+        <div class="contact-line"><strong>Call</strong><a href="tel:+919130660696">+91 91306 60696</a></div>
+        <div class="contact-line"><strong>WhatsApp</strong><a href="https://wa.me/919130660696" target="_blank" rel="noopener">Start a conversation</a></div>
+      </div>
 
+      <form class="form reveal" id="projectForm">
+        <input id="name" required placeholder="Name" aria-label="Name">
+        <input id="phone" required placeholder="Phone Number" aria-label="Phone Number">
+        <select id="project" aria-label="Project Type">
+          <option value="">Project Type</option>
+          <option>Residential</option>
+          <option>Living Room</option>
+          <option>Bedroom</option>
+          <option>Kitchen</option>
+          <option>Bathroom</option>
+          <option>Office</option>
+          <option>Commercial</option>
+          <option>Complete Interior</option>
+          <option>Other</option>
+        </select>
+        <textarea id="message" placeholder="Tell us about your space and requirement..." aria-label="Message"></textarea>
+        <button type="submit">Send Enquiry on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-<div class="container">
-<div class="footer-grid">
-<div class="footer-brand-col"><div class="footer-brand">DEEPRISE INTERIORS</div><div class="footer-sub">Interior Design Studio</div><p class="footer-copy">Spaces designed with depth and detail. Refined interiors, considered materials and modern living.</p><div class="socials"><a href="tel:+919130660696"><i class="fa-solid fa-phone"></i></a><a target="_blank" href="https://wa.me/919130660696"><i class="fa-brands fa-whatsapp"></i></a></div></div>
-<div><h4>Explore</h4><ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#collections">Collections</a></li><li><a href="#projects">Projects</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
-<div><h4>Contact</h4><ul class="footer-links"><li><a href="tel:+919130660696">+91 91306 60696</a></li><li><a target="_blank" href="https://wa.me/919130660696">WhatsApp Enquiry</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Start a Project</a></li></ul></div>
-</div>
-<div class="bottom"><span>© <span id="year"></span> Deeprise Interiors. All Rights Reserved.</span><span>Designed by <strong>Marwar Infotech</strong></span></div>
-</div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">DEEPRISE INTERIORS</div>
+        <div class="eyebrow" style="color:rgba(255,255,255,.38);margin-top:10px">Interior Design Studio</div>
+        <p class="footer-copy">Spaces designed with depth and detail. Refined interiors, considered materials and modern living.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <div class="footer-links">
+          <a href="#about">About</a><a href="#services">Services</a><a href="#styles">Collections</a>
+          <a href="#inspiration">Projects</a><a href="#process">Process</a><a href="#inspiration">Gallery</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+919130660696">+91 91306 60696</a>
+          <a href="https://wa.me/919130660696" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+          <a href="#faq">FAQ</a><a href="#contact">Start a Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Deeprise Interiors. All Rights Reserved.</span>
+      <span>Designed by Marwar Infotech</span>
+    </div>
+  </div>
 </footer>
 
-<div class="floaters">
-<a class="float call magnetic" href="tel:+919130660696" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
-<a class="float wa magnetic" target="_blank" href="https://wa.me/919130660696?text=Hello%20Deeprise%20Interiors,%20I%20would%20like%20to%20discuss%20an%20interior%20design%20project." aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-</div>
-
 <script>
-window.addEventListener("load",()=>setTimeout(()=>document.getElementById("loader").classList.add("hide"),800));
-const nav=document.getElementById("nav");
-window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>45),{passive:true});
+/* Menu */
+const menu = document.getElementById('menu');
+document.getElementById('menuOpen').onclick = () => menu.classList.add('open');
+document.getElementById('menuClose').onclick = () => menu.classList.remove('open');
+document.querySelectorAll('.menu-links a').forEach(a => a.addEventListener('click',()=>menu.classList.remove('open')));
 
-const menu=document.getElementById("menu"),links=document.getElementById("links");
-menu.onclick=()=>{links.classList.toggle("open");const i=menu.querySelector("i");i.classList.toggle("fa-bars");i.classList.toggle("fa-xmark")};
-document.querySelectorAll(".links a").forEach(a=>a.onclick=()=>{links.classList.remove("open");const i=menu.querySelector("i");i.classList.add("fa-bars");i.classList.remove("fa-xmark")});
-
-const slides=[...document.querySelectorAll(".slide")],dots=[...document.querySelectorAll(".dot")],current=document.getElementById("current");
-let index=0,timer;
-function show(next){
-  next=(next+slides.length)%slides.length;
-  if(next===index)return;
-  const old=slides[index],incoming=slides[next];
-  slides.forEach(s=>s.classList.remove("active","exit"));
-  incoming.style.transform="translateX(100%) scale(1.035)";
-  incoming.style.opacity="1";
-  requestAnimationFrame(()=>{old.classList.add("exit");incoming.classList.add("active")});
-  dots.forEach((d,i)=>d.classList.toggle("active",i===next));
-  current.textContent=String(next+1).padStart(2,"0");
-  index=next;
+/* Services carousel */
+const track = document.getElementById('serviceTrack');
+let serviceIndex = 0;
+function moveServices(dir){
+  const cards = [...track.children];
+  const card = cards[0];
+  const gap = 13;
+  const visible = window.innerWidth <= 560 ? 1.15 : window.innerWidth <= 900 ? 2.7 : 5.1;
+  const maxIndex = Math.max(0, Math.ceil(cards.length-visible));
+  serviceIndex = Math.max(0, Math.min(maxIndex, serviceIndex + dir));
+  track.style.transform = `translateX(-${serviceIndex * (card.getBoundingClientRect().width + gap)}px)`;
 }
-function restart(){clearInterval(timer);timer=setInterval(()=>show(index+1),5000)}
-dots.forEach(d=>d.onclick=()=>{show(+d.dataset.i);restart()});restart();
+document.getElementById('serviceNext').onclick=()=>moveServices(1);
+document.getElementById('servicePrev').onclick=()=>moveServices(-1);
+window.addEventListener('resize',()=>{serviceIndex=0;track.style.transform='translateX(0)'});
 
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-
-if(matchMedia("(pointer:fine)").matches){
-document.querySelectorAll(".magnetic").forEach(el=>{
-el.onmousemove=e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;el.style.transform=`translate(${x*.12}px,${y*.12}px)`};
-el.onmouseleave=()=>el.style.transform="translate(0,0)";
-})}
-
-document.querySelectorAll(".faq-item").forEach(item=>{
-const q=item.querySelector(".faq-q"),a=item.querySelector(".faq-a");
-q.onclick=()=>{const open=item.classList.contains("open");document.querySelectorAll(".faq-item").forEach(x=>{x.classList.remove("open");x.querySelector(".faq-a").style.maxHeight=null});if(!open){item.classList.add("open");a.style.maxHeight=a.scrollHeight+"px"}}
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+    btn.querySelector('span').textContent=wasOpen?'+':'−';
+    document.querySelectorAll('.faq-q span').forEach(s=>{
+      if(!s.parentElement.parentElement.classList.contains('open')) s.textContent='+';
+    });
+  });
 });
 
-const parallax=document.getElementById("parallax");
-window.addEventListener("scroll",()=>{if(!parallax)return;const r=parallax.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){parallax.style.transform=`translateY(${(innerHeight/2-r.top)*.035}px) scale(1.05)`}}, {passive:true});
+/* Scroll reveal */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}
+  })
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-document.getElementById("form").onsubmit=e=>{
-e.preventDefault();
-const text=`Hello Deeprise Interiors,
-
-I would like to discuss an interior design project.
-
-Name: ${document.getElementById("name").value}
-Phone: ${document.getElementById("phone").value}
-Project Type: ${document.getElementById("type").value}
-
-Message:
-${document.getElementById("message").value||"I would like to discuss my interior design requirement."}`;
-window.open("https://wa.me/919130660696?text="+encodeURIComponent(text),"_blank");
-};
-document.getElementById("year").textContent=new Date().getFullYear();
+/* WhatsApp form */
+document.getElementById('projectForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const project=document.getElementById('project').value || 'Not specified';
+  const message=document.getElementById('message').value.trim() || 'No additional message';
+  const text=`Hello Deeprise Interiors,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProject Type: ${encodeURIComponent(project)}%0ARequirement: ${encodeURIComponent(message)}`;
+  window.open(`https://wa.me/919130660696?text=${text}`,'_blank');
+});
 </script>
 </body>
 </html>
